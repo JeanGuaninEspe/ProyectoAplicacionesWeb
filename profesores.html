@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
-      h1{
+      h1 {
         color: black;
       }
       .containerw {
@@ -48,7 +48,6 @@
         background-size: 100% auto;
         background-position: center top;
         background-repeat: no-repeat;
-
       }
 
       h4 {
@@ -108,13 +107,13 @@
       }
 
       button:hover {
-        background-color: #307005;
+        background-color: #053a70;
         color: white;
       }
 
       /*Dale un estilo de boton a la clase enlace-boton*/
       .enlace-boton {
-        background-color: #307005;
+        background-color: #bcd8a8;
         color: white;
         padding: 10px 20px;
         text-align: center;
@@ -218,10 +217,10 @@
       <div class="py-5 wel">
         <div class="container">
           <div class="row hidden-md-up">
-            <div class="col-md-4">
+            <div class="col-md-4 card-itin">
               <div class="card p-4 m-2">
                 <img
-                  class="card-img-top itin"
+                  class="itin"
                   src="https://imgs.search.brave.com/RrnlmXawN1XUtT-ONVBFkW1KOwgvLyJgnbzVegIN6pQ/rs:fit:1200:697:1/g:ce/aHR0cDovL3RlaW5j/by5lZHUuY28vd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMDIv/NWEwYTk1YmE5MzUw/NS5qcGVn"
                   alt="Card image cap"
                 />
@@ -241,7 +240,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card p-4 m-2">
+              <div class="card p-4 m-2 card-agro">
                 <img
                   class="card-img-top"
                   src="https://imgs.search.brave.com/vggaXdhCyJK_4yMddHC6Owk7llAmLKoVe9NHTHT4C88/rs:fit:734:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5J/Z19BWTJWTkQ3ek9t/OHdPazNSc0h3SGFF/eSZwaWQ9QXBp"
@@ -263,7 +262,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card p-4 m-2">
+              <div class="card p-4 m-2 card-bio">
                 <img
                   class="card-img-top"
                   src="https://imgs.search.brave.com/r_UmDbhiqtefwkc9-eyc6RpbRod513x3ERzMiJTcUt0/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/bEZlQVhTQnNiT2Yx/S01kNThrTWx3SGFF/OCZwaWQ9QXBp"
@@ -287,7 +286,7 @@
           <br />
           <div class="row">
             <div class="col-md-4">
-              <div class="card p-4 m-2">
+              <div class="card p-4 m-2 card-med">
                 <img
                   class="card-img-top"
                   src="https://imgs.search.brave.com/jFrV9H9iIfQ3x7juR-bA8T-8_kDYLmIeaKVxp_YcQ2U/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5y/V0p1OHc2OVg5UGtt/MzdqZHJUZmh3SGFF/OCZwaWQ9QXBp"
@@ -311,7 +310,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card p-4 m-2">
+              <div class="card p-4 m-2 card-comer">
                 <img
                   class="card-img-top"
                   src="https://imgs.search.brave.com/KLygIEbi-vZyjFP7rY6G93_0yXadMdFljmaQ73FFfpw/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5E/NjVUNTRxVmI3Y2Yx/NVlPYmRSVzB3SGFF/SyZwaWQ9QXBp"
@@ -335,7 +334,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card p-4 m-2">
+              <div class="card p-4 m-2 card-doce">
                 <img
                   class="card-img-top"
                   src="https://imgs.search.brave.com/csRZehLjV-tyAGR2e0B_fQoPwS33O-YDTQUCWdTgDV0/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/LmV4cGxpY2l0LmJp/bmcubmV0L3RoP2lk/PU9JUC5TSm12SHJH/amVDU0VzVk1OOGU2/SWp3SGFFSyZwaWQ9/QXBp"
@@ -377,7 +376,7 @@
     <script>
       $(".btn-ti").click(function () {
         $(".contenido-ti").animate(
-          { height: "toggle", opacity: "toggle" },
+          { height: "toggle", opacity: "toggle"},
           "slow"
         );
       });
@@ -417,8 +416,66 @@
         );
       });
 
-      //Seleciona la imagen de itin y al momento de dar hover sobre ella se cambie con la otra imagen de forma lentamente
-    </script>
+      //Seleccionar card-itin y agrega un efecto de hover
+      $(".card-itin").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+          //Clase para background azul con css
+          $(this).css("background-color", "#bcd8a8");
+          //Quitar el color de fondo despues de 2 segundos
+          setTimeout(function () {
+            $(".card-itin").css("background-color", "#fff");
+          }, 1000);
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
 
+      $(".card-agro").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+
+      $(".card-bio").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+
+      $(".card-med").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+
+      $(".card-comer").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+
+      $(".card-doce").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+    </script>
   </body>
 </html>
