@@ -31,110 +31,167 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <style>
       .containerw {
-        background-image: url('https://imgs.search.brave.com/YJRlAJeoEENorbAbjlIvi4_5RmNXO4l4Hf-0dHlKaUo/rs:fit:800:600:1/g:ce/aHR0cHM6Ly9zYW50/b2RvbWluZ28uZXNw/ZS5lZHUuZWMvd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMDYv/U2VzaW9uMS5qcGc');
+        background-image: url("https://imgs.search.brave.com/T4VuLEUy0mqzTmfXECC1fIEqRDKAEPKzdYzsY9pBw6E/rs:fit:1200:590:1/g:ce/aHR0cHM6Ly9zdGF0/aWMuYWN0dS5mci91/cGxvYWRzLzIwMjAv/MDYvZXNwZS1jYWVu/LWhvbW1ldC1oYXJj/ZWxlbWVudC5qcGc");
         background-size: 100% auto;
         background-position: center top;
         background-repeat: no-repeat;
       }
+
+      h4 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px;
+      }
+
+      .contenido-ti {
+        display: none;
+      }
+
+      .contenido-agro {
+        display: none;
+      }
+
+      .contenido-bio {
+        display: none;
+      }
+
+      .contenido-medicina {
+        display: none;
+      }
+
+      .contenido-comercio {
+        display: none;
+      }
+
+      .contenido-docencia {
+        display: none;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 20px;
+        letter-spacing: normal;
+      }
+
+      h6 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+      }
+      button {
+        background-color: #f5f5f5;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #307005;
+        color: white;
+      }
+
+      /*Dale un estilo de boton a la clase enlace-boton*/
+      .enlace-boton {
+        background-color: #307005;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .enlace-boton:hover {
+        background-color: #bbe7cf;
+        color: black;
+      }
+
+      .slider {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 1s ease;
+      }
+
+      .slider img:nth-child(1) {
+        z-index: 3;
+      }
+
+      .slider img:nth-child(2) {
+        z-index: 2;
+      }
+
+      .slider img:nth-child(3) {
+        z-index: 1;
+      }
+
+      .slider img:nth-child(4) {
+        z-index: 0;
+      }
     </style>
 
-    <title>UFA-ESPE</title>
+    <title>Carreras</title>
   </head>
   <body>
-    <div class="border-bottom bg-light">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile"
-          ></div>
-          <div
-            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end"
-          ></div>
-        </div>
-      </div>
-    </div>
-    <nav
-      class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <a class="navbar-brand" href="#"
-              ><i class="fa-solid fa-shop me-2"></i>
-              <strong>UFA-ESPE</strong></a
-            >
-          </div>
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
-          <div class="input-group">
-            <span class="border-warning input-group-text bg-success text-white"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></span>
-            <input
-              type="text"
-              class="form-control border-warning"
-              style="color: lightgreen"
-            />
-            <button class="btn btn-success text-white">Search</button>
-          </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <div class="ms-auto d-none d-lg-block">
-            <div class="input-group">
-              <span
-                class="border-warning input-group-text bg-success text-white"
-                ><i class="fa-solid fa-magnifying-glass"></i
-              ></span>
-              <input
-                type="text"
-                class="form-control border-warning"
-                style="color: lightgreen"
-              />
-              <button class="btn btn-success text-white">BUSCAR</button>
+    <header class="top">
+      <div class="header-area two header-sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="logo">
+                <a href="Inicio.html"><img src="img/espe.png" alt="espe" /></a>
+              </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-6">
+              <div class="content-wrapper text-right">
+                <div class="main-menu">
+                  <nav>
+                    <ul>
+                      <li><a href="Inicio.html">Inicio</a></li>
+                      <li><a href="estudiantes.html">Estudiantes</a></li>
+                      <li><a href="profesores.html">Carreras</a></li>
+                      <li><a href="contacto.html">Contactos</a></li>
+                      <li><a href="nosotros.html">Acerca de nosotros</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="mobile-menu hidden-lg hidden-md hidden-sm"></div>
             </div>
           </div>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link mx-2 text-uppercase active"
-                aria-current="page"
-                href="Inicio.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="estudiantes.html">Estudiantes</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="profesores.html">Carreas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="contacto.html">Contactos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="indexpro.html"
-                >Acerca de nosotros</a
-              >
-            </li>
-          </ul>
         </div>
       </div>
-    </nav>
+    </header>
+
     <div class="containerw d-flex align-items-center flex-column">
       <!-- Masthead Avatar Image-->
       <img class="masthead-avatar mb-5" />
@@ -143,7 +200,12 @@
         Universidad de las Fuerzas Armadas Espe
       </h1>
       <!--Enlace saber mas-->
-      <a class="btn btn-secondary btn-xl rounded-pill mt-5 p-2 mb-4" href="https://santodomingo.espe.edu.ec/" target="_blank">Conoce mas carreras</a>
+      <a
+        class="enlace-boton"
+        href="https://santodomingo.espe.edu.ec/"
+        target="_blank"
+        >Conoce mas carreras</a
+      >
     </div>
 
     <body>
@@ -153,22 +215,23 @@
             <div class="col-md-4">
               <div class="card p-4 m-2">
                 <img
-                  class="card-img-top"
+                  class="card-img-top itin"
                   src="https://imgs.search.brave.com/RrnlmXawN1XUtT-ONVBFkW1KOwgvLyJgnbzVegIN6pQ/rs:fit:1200:697:1/g:ce/aHR0cDovL3RlaW5j/by5lZHUuY28vd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMDIv/NWEwYTk1YmE5MzUw/NS5qcGVn"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Ingenieria en TICS</h4>
+                <h4 class="card-title text-center">Ingenieria en TICS</h4>
+                <div class="card-block contenido-ti">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la ingenieria en TICS
                   </h6>
-                  <p class="card-text p-y-1">
+                  <p class="p-y-1">
                     El Ingeniero en Tecnologías de la Información es un
                     profesional que cuenta con las habilidades gerenciales
                     necesarias para su desempeño en el campo laboral en las
                     áreas de sistemas
                   </p>
                 </div>
+                <button class="btn-ti">Saber más</button>
               </div>
             </div>
             <div class="col-md-4">
@@ -178,8 +241,8 @@
                   src="https://imgs.search.brave.com/vggaXdhCyJK_4yMddHC6Owk7llAmLKoVe9NHTHT4C88/rs:fit:734:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5J/Z19BWTJWTkQ3ek9t/OHdPazNSc0h3SGFF/eSZwaWQ9QXBp"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Ingenieria en Agropecuaria</h4>
+                <h4 class="card-title">Ingenieria en Agropecuaria</h4>
+                <div class="card-block contenido-agro">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la ingenieria en Agropecuaria
                   </h6>
@@ -190,6 +253,7 @@
                     producción y Soberanía Alimentaria.
                   </p>
                 </div>
+                <button class="btn-agro">Saber más</button>
               </div>
             </div>
             <div class="col-md-4">
@@ -199,8 +263,8 @@
                   src="https://imgs.search.brave.com/r_UmDbhiqtefwkc9-eyc6RpbRod513x3ERzMiJTcUt0/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5M/bEZlQVhTQnNiT2Yx/S01kNThrTWx3SGFF/OCZwaWQ9QXBp"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Ingenieria en Biotecnologia</h4>
+                <h4 class="card-title">Ingenieria en Biotecnologia</h4>
+                <div class="card-block contenido-bio">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la ingenieria en Biotecnologia
                   </h6>
@@ -210,6 +274,7 @@
                     problemáticas de la industria y el ambiente.
                   </p>
                 </div>
+                <button class="btn-bio">Saber más</button>
               </div>
             </div>
           </div>
@@ -222,8 +287,8 @@
                   src="https://imgs.search.brave.com/jFrV9H9iIfQ3x7juR-bA8T-8_kDYLmIeaKVxp_YcQ2U/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5y/V0p1OHc2OVg5UGtt/MzdqZHJUZmh3SGFF/OCZwaWQ9QXBp"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Medicina</h4>
+                <h4 class="card-title">Medicina</h4>
+                <div class="card-block contenido-medicina">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la carrera de medicina
                   </h6>
@@ -236,6 +301,7 @@
                     grupo.
                   </p>
                 </div>
+                <button class="btn-med">Saber más</button>
               </div>
             </div>
             <div class="col-md-4">
@@ -245,8 +311,8 @@
                   src="https://imgs.search.brave.com/KLygIEbi-vZyjFP7rY6G93_0yXadMdFljmaQ73FFfpw/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5E/NjVUNTRxVmI3Y2Yx/NVlPYmRSVzB3SGFF/SyZwaWQ9QXBp"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Comercio Exterior Internacional.</h4>
+                <h4 class="card-title">Comercio Exterior Internacional</h4>
+                <div class="card-block contenido-comercio">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la carrera de Comercio Exterior
                   </h6>
@@ -259,6 +325,7 @@
                     total: sin restricciones ni aranceles.
                   </p>
                 </div>
+                <button class="btn-comer">Saber más</button>
               </div>
             </div>
             <div class="col-md-4">
@@ -268,8 +335,8 @@
                   src="https://imgs.search.brave.com/csRZehLjV-tyAGR2e0B_fQoPwS33O-YDTQUCWdTgDV0/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/LmV4cGxpY2l0LmJp/bmcubmV0L3RoP2lk/PU9JUC5TSm12SHJH/amVDU0VzVk1OOGU2/SWp3SGFFSyZwaWQ9/QXBp"
                   alt="Card image cap"
                 />
-                <div class="card-block">
-                  <h4 class="card-title">Docencia.</h4>
+                <h4 class="card-title">Docencia.</h4>
+                <div class="card-block contenido-docencia">
                   <h6 class="card-subtitle text-muted">
                     Conoce lo que es la carrera de Docencia
                   </h6>
@@ -284,6 +351,7 @@
                     el tema al otro.
                   </p>
                 </div>
+                <button class="btn-docencia">Saber más</button>
               </div>
             </div>
           </div>
@@ -293,5 +361,57 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
       <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
     </body>
+
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; ESPE 2023</p>
+      </div>
+    </footer>
+
+    <script>
+      $(".btn-ti").click(function () {
+        $(".contenido-ti").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      $(".btn-med").click(function () {
+        $(".contenido-medicina").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      $(".btn-comer").click(function () {
+        $(".contenido-comercio").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      $(".btn-docencia").click(function () {
+        $(".contenido-docencia").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      $(".btn-bio").click(function () {
+        $(".contenido-bio").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      $(".btn-agro").click(function () {
+        $(".contenido-agro").animate(
+          { height: "toggle", opacity: "toggle" },
+          "slow"
+        );
+      });
+
+      //Seleciona la imagen de itin y al momento de dar hover sobre ella se cambie con la otra imagen de forma lentamente
+    </script>
   </body>
 </html>
