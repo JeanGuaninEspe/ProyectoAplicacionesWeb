@@ -10,6 +10,10 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('img').addClass('animated fadeInUp',2000);
 });
+$(document).ready(function(){
+    $('p').addClass('animated fadeInUp',2000);
+});
+
 
 
 //al hacer hover sobre .fw-bold subrayar y luego quitar subrayado
@@ -155,6 +159,16 @@ $(document).ready(function(){
             $('#email').val('');
             $('#subject').val('');
             $('#message').val('');
+        }
+    });
+});
+
+//no permitir que en subject se ingresen numeros
+$(document).ready(function(){
+    $('#subject').keypress(function(e){
+        var key = e.keyCode;
+        if(key >= 48 && key <= 57){
+            e.preventDefault();
         }
     });
 });
