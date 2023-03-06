@@ -5,8 +5,10 @@ if (!isset($_SESSION['clicks'])) {
     $_SESSION['clicks'] = 0; // Inicializa la variable de sesión 'clicks' si aún no existe
 }
 
-// Si se ha hecho clic en el botón 'clicked', incrementa la variable de sesión 'clicks' y se muestra automaticamente
-
+// Si se ha hecho clic en el botón 'clicked', incrementa la variable de sesión 'clicks'
+if (isset($_POST['clicked'])) {
+    $_SESSION['clicks']++;
+}
 ?>
 <!doctype html>
 <html lang="en">
