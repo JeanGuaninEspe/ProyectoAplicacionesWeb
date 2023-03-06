@@ -9,6 +9,7 @@ if (!isset($_SESSION['clicks'])) {
 if (isset($_POST['clicked'])) {
     $_SESSION['clicks']++;
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -462,7 +463,7 @@ if (isset($_POST['clicked'])) {
        function escribirNOmbre ($nombre, $apellido, $estudiante, $ciudad, $modo) {
         $nombre_archivo ="DatosGuardadosProyecto.txt"; 
         $abrir_modos = array(
-            'a' => 'a',
+            'sobreescribir' => 'w',
             'ampliar' => 'a'
         );
         if (isset($abrir_modos[$modo])) { 
@@ -470,7 +471,7 @@ if (isset($_POST['clicked'])) {
             $archivo = fopen($nombre_archivo, $abrir_modos[$modo]);
             // escribir cada ingreso de todos los campos en una línea separada
             foreach ($nombre as $key => $value) {
-                fwrite($archivo, $value . ' ' . $apellido[$key] . ' ' . $estudiante[$key] . ' ' . $ciudad[$key] .  ' ' . $modo[$key] . PHP_EOL);
+                fwrite($archivo, $value . ' ' . $apellido[$key] . ' ' . $estudiante[$key] . ' ' . $ciudad[$key] . PHP_EOL);
             }
             // cerrar el archivo
             fclose($archivo);
