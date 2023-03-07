@@ -60,7 +60,6 @@
             color: rgb(184, 61, 61);
         }
     </style>
-
 </head>
 
 <body>
@@ -138,6 +137,44 @@
                         construcción de ciudadanía, y que articule los diferentes niveles y modalidades del sistema de
                         educación.
                     </p>
+                    <form method="post">
+                        <h1>Dejanos tu opinión</h1>
+                        <input type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                        <br>
+                        <input type="txt" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                        <br>
+                        <input type="txt" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+                        <br>
+                        <input type="txt" name="genero" id="genero" placeholder="Ingrese su genero">
+                        <br>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Ingrese su mensaje"></textarea>
+
+                        <br>
+                        <input type="submit" name="btn" id="btn" value="Enviar">
+                    </form>
+<br>
+                   
+
+
+
+                    <?php
+
+if (isset($_POST ['abrir'])){
+    $archivo = $_POST['namefile'];
+    if(file_exists ($archivo)){
+        $contenido =file_get_contents($archivo);
+        // echo $contenido; //esto va ir comentando ya que nos sal en ela parte de arriba
+    }
+ }
+
+
+
+                    ?>
+
+
+                    <br><br>
+
                 </div>
                 <div class="col-lg-6">
                     <div class="content ps-0 ps-lg-5">
@@ -169,50 +206,39 @@
                         </ul>
                         <div class="position-relative mt-4">
                             <img src="about-2.jpg" class="img-fluid rounded-4 border border-warning" alt="">
+                            <br> <br>
+                            <form action=<?php echo $_SERVER['PHP_SELF'] ?> method="post">
+                        <input type="file" name="namefile" id="">
+                        <input type="submit" name="abrir" value="abrir archivo">
+                    </form>
+                            <br>
+                            <textarea name="mensaje" id="contenido" cols="30" rows="10">
+                            <?php global $contenido; 
+                        if (!empty($contenido)) {
+                            echo $contenido;
+                        }
+                        ?>
+                            </textarea>
                         </div>
+
                     </div>
 
                 </div>
 
+
             </div>
             <br>
-   
 
-    
-            
+
+
+
 
         </div>
-        <form method="post">
-    <h1>Dejanos tu opinión</h1>
-    <input type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-    <br>
-    <input type="txt" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-    <br>
-    <input type="txt" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-    <br>
-    <input type="text" id="cedula" name="cedula" placeholder="Ingrese la cédula de identidad.">
-    <br>
-    <input type="txt" name="genero" id="genero" placeholder="Ingrese su genero">
-    <br>
-    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje"></textarea>
-
-    <br>
-
-    <input type="submit" name="btn" id="btn" value="Enviar">
-    <?php
-    echo "Hoy es " . date("Y/m/d") . "<br>";
-    ?>
-
-    </form>
-  
 
 
-        <br><br>
-
-        
     </section>
 
-    
+
 
 
     <footer class="py-5 bg-dark">
@@ -228,11 +254,10 @@
 
 <?php
 #guardar todos los datos del formulario en txt
-if(isset($_POST['btn'])){
+if (isset($_POST['btn'])) {
     $correo = $_POST['correo'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
-    $cedula = $_POST['cedula'];
     $genero = $_POST['genero'];
     $mensaje = $_POST['mensaje'];
 
@@ -240,12 +265,16 @@ if(isset($_POST['btn'])){
     fwrite($archivo, "Correo: " . $correo . "\r\n");
     fwrite($archivo, "Nombre: " . $nombre . "\r\n");
     fwrite($archivo, "Apellido: " . $apellido . "\r\n");
-    fwrite($archivo, "Cedula: " . $cedula . "\r\n");
     fwrite($archivo, "Genero: " . $genero . "\r\n");
     fwrite($archivo, "Mensaje: " . $mensaje . "\r\n");
     fwrite($archivo, "----------------------------------------" . "\r\n");
     fclose($archivo);
+
+
 }
+#cargar archivo txt y mostrar en textarea
+
+
 
 
 
@@ -286,8 +315,8 @@ echo "<script>
 
 
 <?php
-  
-    echo "<style>
+
+echo "<style>
     form{
         width: 500px;
         margin: 0 auto;
@@ -313,7 +342,7 @@ echo "<script>
         font-size: 16px;
         outline: none;
     }
-    form textarea{
+     textarea{
         display: block;
         width: 100%;
         padding: 10px;
@@ -335,4 +364,4 @@ echo "<script>
         transition: .6s;
     }
     </style>";
-   ?>
+?>
