@@ -471,7 +471,11 @@ if (isset($_POST['clicked'])) {
             $archivo = fopen($nombre_archivo, $abrir_modos[$modo]);
             // escribir cada ingreso de todos los campos en una línea separada
             foreach ($nombre as $key => $value) {
-                fwrite($archivo, $value . ' ' . $apellido[$key] . ' ' . $estudiante[$key] . ' ' . $ciudad[$key] . "\n");
+                fwrite($archivo, "----------------------------------------" . "\r\n");
+                fwrite($archivo, "Nombre: " . $nombre[$key] . "\r \n");
+                fwrite($archivo, "Apellido: " . $apellido[$key] . "\r \n");
+                fwrite($archivo, "Estudiante: " . $estudiante[$key] . "\r \n");
+                fwrite($archivo, "Ciudad: " . $ciudad[$key] . "\r \n");
             }
             // cerrar el archivo
             fclose($archivo);
