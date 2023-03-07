@@ -1,42 +1,12 @@
 Nombre: Jean
 Correo: jandres080@gmail.com
-Teléfono: 09-68731219
-Mensaje: adfsdfsdf
-
-Nombre: Jean
-Correo: jandres080@gmail.com
-Teléfono: 09-68731219
-Mensaje: fsdfsdfsf
-
-Nombre: Jean
-Correo: jandres080@gmail.com
 Teléfono: 09683423
-Mensaje: adasdasdasd
-
-Nombre: Jean
-Correo: jandres080@gmail.com
-Teléfono: 0995798523
-Mensaje: OSADJASDJASJD
-
-
-Nombre: Jean
-Correo: jandres080@gmail.com
-Teléfono: 09-68731219
-Mensaje: 45667678689
-
-
-Nombre: Jean
-Correo: jandres080@gmail.com
-Teléfono: 09683423
-Mensaje: adasdfsdfsdf
-
-Nombre: Jean
-Correo: jean210915@yahoo.com
-Teléfono: 09-68731219
-Mensaje: gdfgdfgdgdfg
+Mensaje: sfdsdfsdfsf
+----------------------------------------
 
 Nombre: Jean
 Correo: jean210915@yahoo.com
 Teléfono: 09683423
-Mensaje: sadasdasdgfggg
+Mensaje: asdafsdfgdfg
+----------------------------------------
 

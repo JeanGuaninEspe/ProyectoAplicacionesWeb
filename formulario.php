@@ -20,7 +20,8 @@ if (isset($_POST['enviar'])) {
   fwrite($archivo, "Nombre: $nombre\n");
   fwrite($archivo, "Correo: $correo\n");
   fwrite($archivo, "Teléfono: $telefono\n");
-  fwrite($archivo, "Mensaje: $mensaje\n\n");
+  fwrite($archivo, "Mensaje: $mensaje\n");
+  fwrite($archivo, "----------------------------------------\n\n");
 
   // Cerrar el archivo
   fclose($archivo);
@@ -31,6 +32,8 @@ if (isset($_POST['enviar'])) {
 }
 
 echo "Los datos se han guardado correctamente";
+
+
 
 
 ?>
