@@ -4,6 +4,20 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $('input').addClass('animated fadeInUp');
+});
+$(document).ready(function(){
+    $('label').addClass('animated fadeInUp');
+});
+$(document).ready(function(){
+    $('h1').addClass('animated fadeInUp');
+});
+$(document).ready(function(){
+    $('select').addClass('animated fadeInUp');
+});
+
+
+$(document).ready(function(){
     $('.wel').addClass('animated fadeInUp',2000);
 });
 
@@ -44,6 +58,25 @@ $(document).ready(function(){
         $('.pt-4').toggle();
     });
 });
+
+//ocultar el formulario
+$(document).ready(function(){
+    $('form').hide();
+});
+
+
+
+//al hacer click sobre .btn-form mostrar el formulario si esta oculto y ocultarlo si esta visible
+
+
+$(document).ready(function(){
+    $('.btn-form').click(function(){
+        $('form').toggle();
+    });
+});
+
+
+
 
 //validad que en #name solo se ingresen letras
 $(document).ready(function(){
@@ -172,3 +205,148 @@ $(document).ready(function(){
         }
     });
 });
+
+
+
+//verificar que el campo nombre del formulario solo tenga letras
+$(document).ready(function(){
+    $('#nombre').keypress(function(e){
+        var key = e.keyCode;
+        if(key >= 48 && key <= 57){
+            e.preventDefault();
+        }
+    });
+}
+)
+
+//verificar que el campo correo este completo
+$(document).ready(function(){
+    $('#correo').blur(function(){
+        var correo = $(this).val();
+        if(correo.indexOf('@') == -1 || correo.indexOf('.') == -1){
+            $(this).css('border','2px solid red');
+        }else{
+            $(this).css('border','2px solid green');
+        }
+    });
+}
+)
+
+//verificar que el campo mensaje tenga mas de 10 caracteres
+$(document).ready(function(){
+    $('#mensaje').blur(function(){
+        var mensaje = $(this).val();
+        if(mensaje.length < 10){
+            $(this).css('border','2px solid red');
+        }else{
+            $(this).css('border','2px solid green');
+        }
+    });
+}
+)
+
+//verificar que el campo telefono solo tenga numeros
+$(document).ready(function(){
+    $('#telefono').keypress(function(e){
+        var key = e.keyCode;
+        if(key < 48 || key > 57){
+            e.preventDefault();
+        }
+    });
+}
+)
+
+//verificar que nombre ni telefono este vacio si no lo esta poner los bordes de verde
+
+$(document).ready(function(){
+    $('#nombre').blur(function(){
+        var nombre = $(this).val();
+        if(nombre == ''){
+            $(this).css('border','2px solid red');
+        }else{
+            $(this).css('border','2px solid green');
+        }
+    });
+}
+)
+
+$(document).ready(function(){
+    $('#telefono').blur(function(){
+        var telefono = $(this).val();
+        if(telefono == ''){
+            $(this).css('border','2px solid red');
+        }else{
+            $(this).css('border','2px solid green');
+        }
+    });
+}
+)
+
+//solo enviar el formulario si los campos estan llenos si no mostrar un alerta y si se envio tambien mostrar alerta
+$(document).ready(function(){
+    $('#enviar-b').click(function(){
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+        var telefono = $('#telefono').val();
+        if(nombre == '' || correo == '' || mensaje == '' || telefono == ''){
+            alert('Todos los campos son obligatorios');
+        }
+    });
+}
+)
+
+$(document).ready(function(){
+    $('#enviar-b').click(function(){
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+        var telefono = $('#telefono').val();
+        if(nombre != '' && correo != '' && mensaje != '' && telefono != ''){
+            $('#form').submit();
+        }
+    });
+}
+)
+
+$(document).ready(function(){
+    $('#enviar-b').click(function(){
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+        var telefono = $('#telefono').val();
+        if(nombre != '' && correo != '' && mensaje != '' && telefono != ''){
+            alert('Mensaje enviado');
+        }
+    });
+}
+)
+
+//al enviar el formulario ocultarlo y mostrar un mensaje de gracias
+$(document).ready(function(){
+    $('#enviar-b').click(function(){
+        var nombre = $('#nombre').val();
+        var correo = $('#correo').val();
+        var mensaje = $('#mensaje').val();
+        var telefono = $('#telefono').val();
+        if(nombre != '' && correo != '' && mensaje != '' && telefono != ''){
+            $('#form').hide();
+            $('#gracias').show();
+        }
+    });
+}
+)
+
+
+
+
+
+//evitar que la pagina se recargue al enviar el formulario
+
+
+
+
+
+
+
+
